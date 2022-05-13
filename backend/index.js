@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express, { application } from 'express'
 import pexelsRouter from './routes/pexels-router.js'
 
