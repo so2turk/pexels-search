@@ -3,6 +3,7 @@
 ### Fullstack app for image / vid search from Pexels API
 
 ## Tech Stack
+
 - React
 - Node.js / Express.js
 - bcyriptjs
@@ -11,13 +12,18 @@
 - Docker
 
 ## Sofar
+
 - [x] Create a repository
 - [x] Create a README file with projection of the project
+- [x] Create backend with Node.js / Express.js
+- [x] Create routes for Pexels API
+  - [x] Create controller to get images/vids
+  - [x] Check routes with Postman
 
 ## What's Next?
+
 (order may change)
-- [ ] Create backend with Node.js / Express.js
-- [ ] Create route for Pexels API
+
 - [ ] Create frontend with React
 - [ ] Setup Docker for development
 - [ ] Build page for images/vids display
