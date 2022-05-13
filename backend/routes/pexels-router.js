@@ -10,8 +10,8 @@ const pexelsRouter = express.Router()
 
 pexelsRouter
 	.post('/images', getImages)
-	.get('/images/:id', getImage)
-	.post('/vids', getVids)
-	.get('/vids/:id', getVid)
+	.get('/image/:id', getImage)
+	.get('/vids', getVids)
+	.get('/vid/:id', getVid)
 
 export default pexelsRouter
