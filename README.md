@@ -19,14 +19,18 @@
 - [x] Create routes for Pexels API
   - [x] Create controller to get images/vids
   - [x] Check routes with Postman
+- [x] Create frontend with React
+- [ ] Build page for images/vids display
+  - [x] Import data from backend
+  - [x] Create a card component
 
 ## What's Next?
 
 (order may change)
 
-- [ ] Create frontend with React
+-[ ] Apply css to card view
+
 - [ ] Setup Docker for development
-- [ ] Build page for images/vids display
 - [ ] Implement infinite scroll for more images/vids
 - [ ] Create a spinner for loading page/images/vids
 - [ ] Enable search functionality
