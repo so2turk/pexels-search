@@ -15,7 +15,7 @@ function App() {
 
 	const getVideos = async () => {
 		try {
-			const result = await axios.get('/pexels/vids')
+			const result = await axios.get('api/pexels/vids')
 			setTotalVids(result.data.total_results)
 			setVideos(result.data.videos)
 		} catch (err) {
