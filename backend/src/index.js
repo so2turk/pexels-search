@@ -9,5 +9,5 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/pexels', pexelsRouter)
 
-const port = process.env.PORT || 5005
+const port = process.env.PORT || 3000
 app.listen(port, () => console.log(`Listening on port ${port}`))
