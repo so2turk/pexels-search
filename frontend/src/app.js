@@ -23,15 +23,20 @@ function App() {
 	console.log(videos)
 
 	return (
-		<div className="App">
-			{videos.length > 0 &&
-				videos.map((video, i) => {
-					return (
-						<div key={`${video.id} + ${i}`}>
-							<VidCard video={video} />
-						</div>
-					)
-				})}
+		<div className="app">
+			{videos.length > 0 && (
+				<div className="total-vids">Totol Videos: {totalVids}</div>
+			)}
+			<div className="cards">
+				{videos.length > 0 &&
+					videos.map((video, i) => {
+						return (
+							<div className="cardContainer" key={`${video.id} + ${i}`}>
+								<VidCard video={video} />
+							</div>
+						)
+					})}
+			</div>
 		</div>
 	)
 }
