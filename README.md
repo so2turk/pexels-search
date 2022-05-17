@@ -15,22 +15,26 @@
 
 - [x] Create a repository
 - [x] Create a README file with projection of the project
-- [x] Create backend with Node.js / Express.js
+
+✅ Create backend with Node.js / Express.js
+
 - [x] Create routes for Pexels API
   - [x] Create controller to get images/vids
   - [x] Check routes with Postman
-- [x] Create frontend with React
+
+✅ Create frontend with React
+
 - [ ] Build page for images/vids display
   - [x] Import data from backend
   - [x] Create a card component
+  - [x] Apply css to card view
+
+✅ Setup Docker for development
 
 ## What's Next?
 
 (order may change)
 
--[ ] Apply css to card view
-
-- [ ] Setup Docker for development
 - [ ] Implement infinite scroll for more images/vids
 - [ ] Create a spinner for loading page/images/vids
 - [ ] Enable search functionality
