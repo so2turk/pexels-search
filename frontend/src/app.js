@@ -5,6 +5,7 @@ import VidCard from './components/card/vid-card'
 
 function App() {
 	const [videos, setVideos] = useState([])
+	const [totalVids, setTotalVids] = useState(0)
 
 	useEffect(() => {
 		getVideos()
@@ -15,6 +16,7 @@ function App() {
 	const getVideos = async () => {
 		try {
 			const result = await axios.get('/pexels/vids')
+			setTotalVids(result.data.total_results)
 			setVideos(result.data.videos)
 		} catch (err) {
 			console.log(err)
