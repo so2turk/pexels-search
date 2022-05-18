@@ -24,19 +24,20 @@
 
 ✅ Create frontend with React
 
-- [ ] Build page for images/vids display
+- [x] Build page for images/vids display
   - [x] Import data from backend
   - [x] Create a card component
   - [x] Apply css to card view
 
 ✅ Setup Docker for development
 
+- [x] Implement infinite scroll for more images/vids
+- [x] Create a spinner for loading page/images/vids
+
 ## What's Next?
 
 (order may change)
 
-- [ ] Implement infinite scroll for more images/vids
-- [ ] Create a spinner for loading page/images/vids
 - [ ] Enable search functionality
 - [ ] Create user route for registration/login
 - [ ] Implement JWT for secure login
