@@ -6,23 +6,39 @@ import VidCard from './components/card/vid-card'
 function App() {
 	const [videos, setVideos] = useState([])
 	const [totalVids, setTotalVids] = useState(0)
+	let page = 1
 
 	useEffect(() => {
-		getVideos()
+		if (!videos.length > 0) getVideos()
 
+		window.addEventListener('scroll', handleScroll)
 		// eslint-disable-next-line
 	}, [])
 
 	const getVideos = async () => {
 		try {
-			const result = await axios.get('api/pexels/vids')
-			setTotalVids(result.data.total_results)
-			setVideos(result.data.videos)
+			const result = await axios.get('/api/pexels/vids', { page })
+
+			if (page > 1) {
+				setVideos((videos) => [...videos, ...result.data.videos])
+			} else {
+				setTotalVids(result.data.total_results)
+				setVideos(result.data.videos)
+			}
 		} catch (err) {
 			console.log(err)
 		}
 	}
-	console.log(videos)
+
+	const handleScroll = () => {
+		if (
+			window.innerHeight + document.documentElement.scrollTop ===
+			document.documentElement.offsetHeight
+		) {
+			page += 1
+			getVideos()
+		}
+	}
 
 	return (
 		<div className="app">
