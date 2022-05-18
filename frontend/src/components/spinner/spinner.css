@@ -1,0 +1,50 @@
+.view-box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+}
+
+.spinner1, .spinner2, .spinner3 {
+  margin: auto;
+  border-right-color: transparent;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.spinner1 {
+  height: 150px;
+  width: 150px;
+  animation: rotate 1.1s infinite linear;
+  border: 5px solid green;
+}
+
+.spinner2 {
+  height: 100px;
+  width: 100px;
+  animation: rotate 0.7s infinite reverse;
+  border: 5px solid cadetblue;
+}
+
+.spinner3 {
+  height: 50px;
+  width: 50px;
+  animation: rotate 1.1s infinite linear;
+  border: 5px solid orange;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
