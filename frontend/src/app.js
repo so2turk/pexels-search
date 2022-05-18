@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import './app.css'
 import VidCard from './components/card/vid-card'
+import Spinner from './components/spinner/spinner'
 
 function App() {
 	const [videos, setVideos] = useState([])
 	const [totalVids, setTotalVids] = useState(0)
+	const [loading, setLoading] = useState(false)
 	let page = 1
 
 	useEffect(() => {
@@ -28,6 +30,7 @@ function App() {
 		} catch (err) {
 			console.log(err)
 		}
+		setLoading(false)
 	}
 
 	const handleScroll = () => {
@@ -35,6 +38,7 @@ function App() {
 			window.innerHeight + document.documentElement.scrollTop ===
 			document.documentElement.offsetHeight
 		) {
+			setLoading(true)
 			page += 1
 			getVideos()
 		}
@@ -46,15 +50,19 @@ function App() {
 				<div className="total-vids">Totol Videos: {totalVids}</div>
 			)}
 			<div className="cards">
-				{videos.length > 0 &&
+				{videos.length > 0 ? (
 					videos.map((video, i) => {
 						return (
 							<div className="cardContainer" key={`${video.id} + ${i}`}>
 								<VidCard video={video} />
 							</div>
 						)
-					})}
+					})
+				) : (
+					<Spinner />
+				)}
 			</div>
+			{loading && <Spinner />}
 		</div>
 	)
 }
