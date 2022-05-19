@@ -1,21 +1,27 @@
+.view-box,
+.spinner1,
+.spinner2,
+.spinner3 {
+  background-color: transparent;
+  margin: auto;
+}
+
 .view-box {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  
-  margin: auto;
+
   width: 150px;
   height: 150px;
-  background-color: transparent;
 }
 
-.spinner1, .spinner2, .spinner3 {
-  margin: auto;
+.spinner1,
+.spinner2,
+.spinner3 {
   border-right-color: transparent;
   border-radius: 50%;
-  background-color: transparent;
 }
 
 .spinner1 {
