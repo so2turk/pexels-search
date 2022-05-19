@@ -4,3 +4,8 @@
   font-family: HelveticaNeue;
   background-color: #f9fafb;
 }
+
+.app {
+  display: flex;
+  flex-direction: row;
+}

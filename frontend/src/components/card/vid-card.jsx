@@ -4,11 +4,9 @@ const VidCard = ({ video }) => {
 		<div className="card">
 			<div className="card-detail">
 				<div className="vid-detail">
-					<video
-						className="vid"
-						width="300"
-						controls
-						src={video.video_files[0].link}
+					<img
+						className="vid-img"
+						src={video.video_pictures[10].picture}
 						alt="video"
 					/>
 				</div>

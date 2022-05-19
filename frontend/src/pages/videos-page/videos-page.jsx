@@ -3,6 +3,7 @@ import axios from 'axios'
 import VidCard from '../../components/card/vid-card'
 import Spinner from '../../components/spinner/spinner'
 import './videos-page.css'
+import { Link } from 'react-router-dom'
 
 function VideosPage() {
 	const [videos, setVideos] = useState([])
@@ -54,7 +55,9 @@ function VideosPage() {
 					videos.map((video, i) => {
 						return (
 							<div className="cardContainer" key={`${video.id} + ${i}`}>
-								<VidCard video={video} />
+								<Link to={`/video/${video.id}`}>
+									<VidCard video={video} />
+								</Link>
 							</div>
 						)
 					})
