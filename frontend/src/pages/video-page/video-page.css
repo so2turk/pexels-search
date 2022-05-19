@@ -1,0 +1,31 @@
+.vid-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.vid {
+  width: 1000px;
+  margin-bottom: 50px;
+}
+
+video {
+  width: 100%;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .vid {
+    min-width: 600px;
+  }
+
+}
