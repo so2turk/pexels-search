@@ -26,4 +26,18 @@ export const getVids = async (req, res) => {
 	}
 }
 
-export const getVid = () => {}
+export const getVid = async (req, res) => {
+	const id = req.params.id
+
+	try {
+		const result = await axios.get(`${pexelsURL}videos/videos/${id}`, {
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: process.env.PEXELS_API_KEY,
+			},
+		})
+		res.status(200).json(result.data)
+	} catch (err) {
+		res.status(500).json({ msg: 'something went wrong', eMsg: err.message })
+	}
+}
