@@ -33,6 +33,9 @@
 
 - [x] Implement infinite scroll for more images/vids
 - [x] Create a spinner for loading page/images/vids
+- [ ] Create detail page for images/vids
+  - [ ] Enable comment / like functionality
+  - [x] Display realated images/vids
 
 ## What's Next?
 
@@ -43,8 +46,5 @@
 - [ ] Implement JWT for secure login
   - [ ] Enable JWT routes for access and refresh tokens
   - [ ] Create protected routes at frontend
-- [ ] Create detail page for images/vids
-  - [ ] Enable comment / like functionality
-  - [ ] Display realated images/vids
 - [ ] Create profile page for users
   - [ ] Enable user to choose avatar
