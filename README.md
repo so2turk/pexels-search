@@ -36,13 +36,15 @@
 - [ ] Create detail page for images/vids
   - [ ] Enable comment / like functionality
   - [x] Display realated images/vids
+- [x] Create user route for registration/login
+  - [x] Create user model
+  - [x] Create register / login controllers
 
 ## What's Next?
 
 (order may change)
 
 - [ ] Enable search functionality
-- [ ] Create user route for registration/login
 - [ ] Implement JWT for secure login
   - [ ] Enable JWT routes for access and refresh tokens
   - [ ] Create protected routes at frontend
