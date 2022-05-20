@@ -1,7 +1,7 @@
-import 'dotenv/config'
 import express from 'express'
 import pexelsRouter from './routes/pexels-router.js'
 import usersRouter from './routes/users-router.js'
+import('./utils/database-connection.js')
 
 const app = express()
 
