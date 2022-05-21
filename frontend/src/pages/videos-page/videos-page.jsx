@@ -5,22 +5,28 @@ import Spinner from '../../components/spinner/spinner'
 import './videos-page.css'
 import { Link } from 'react-router-dom'
 
-function VideosPage() {
+function VideosPage({ query }) {
 	const [videos, setVideos] = useState([])
 	const [totalVids, setTotalVids] = useState(0)
 	const [loading, setLoading] = useState(false)
 	let page = 1
 
 	useEffect(() => {
-		if (!videos.length > 0) getVideos()
+		if (!videos.length > 0) getVideos(query)
 
 		window.addEventListener('scroll', handleScroll)
 		// eslint-disable-next-line
 	}, [])
 
-	const getVideos = async () => {
+	useEffect(() => {
+		getVideos(query)
+
+		// eslint-disable-next-line
+	}, [query])
+
+	const getVideos = async (query) => {
 		try {
-			const result = await axios.get('/api/pexels/vids', { page })
+			const result = await axios.post('/api/pexels/vids', { page, query })
 
 			if (page > 1) {
 				setVideos((videos) => [...videos, ...result.data.videos])

@@ -1,7 +1,16 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './nav.css'
 
-const Nav = ({ user }) => {
+const Nav = ({ user, setQuery }) => {
+	const [search, setSearch] = useState()
+
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		console.log('lol')
+		setQuery(search)
+	}
+
 	return (
 		<div className="nav-body">
 			<div className="nav">
@@ -9,11 +18,12 @@ const Nav = ({ user }) => {
 					<img className="logo-img" src="/Logo.svg" alt="logo" />
 				</Link>
 				<div className="wrap">
-					<form className="search">
+					<form className="search" onSubmit={handleSubmit}>
 						<input
 							type="text"
 							className="input-field"
 							placeholder="Search videos..."
+							onChange={(e) => setSearch(e.target.value)}
 						/>
 						<button type="submit" className="bSubmit button">
 							Search

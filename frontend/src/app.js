@@ -9,13 +9,14 @@ import Nav from './components/nav/nav'
 
 function App() {
 	const [user, setUser] = useState()
+	const [query, setQuery] = useState('trending')
 
 	return (
 		<Router>
 			<div className="app">
-				<Nav user={user} />
+				<Nav user={user} setQuery={setQuery} />
 				<Routes>
-					<Route path="/" element={<VideosPage />} />
+					<Route path="/" element={<VideosPage query={query} />} />
 					<Route path="/video/:id" element={<VideoPage />} />
 					<Route path="/register" element={<Register />} />
 					<Route
