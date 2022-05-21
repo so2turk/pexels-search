@@ -39,14 +39,23 @@
 - [x] Create user route for registration/login
   - [x] Create user model
   - [x] Create register / login controllers
+- [x] Create register/login pages
+- [x] Enable search functionality
 
 ## What's Next?
 
 (order may change)
 
-- [ ] Enable search functionality
 - [ ] Implement JWT for secure login
   - [ ] Enable JWT routes for access and refresh tokens
   - [ ] Create protected routes at frontend
 - [ ] Create profile page for users
   - [ ] Enable user to choose avatar
+
+## How to?
+
+- Backend & Frontend
+  - npm i
+- Project
+  - build image: docker-compose up --build
+  - use image: docker-compose up
