@@ -30,12 +30,29 @@ const Register = ({ setShowReg }) => {
 	}
 
 	return (
-		<div>
-			<form onSubmit={handleReg}>
-				<input type="email" placeholder="E-mail" ref={emailRef} />
-				<input type="text" placeholder="User Name" ref={nameRef} />
-				<input type="password" placeholder="Password" ref={passwordRef} />
-				<button type="submit">Register</button>
+		<div className="regContainer">
+			<form className="regForm" onSubmit={handleReg}>
+				<input
+					className="input-field inputReg"
+					type="email"
+					placeholder="E-mail"
+					ref={emailRef}
+				/>
+				<input
+					className="input-field inputReg"
+					type="text"
+					placeholder="User Name"
+					ref={nameRef}
+				/>
+				<input
+					className="input-field inputReg"
+					type="password"
+					placeholder="Password"
+					ref={passwordRef}
+				/>
+				<button className="bReg button" type="submit">
+					Register
+				</button>
 			</form>
 			<div>
 				{regSuccess && (
