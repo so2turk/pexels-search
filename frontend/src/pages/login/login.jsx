@@ -30,16 +30,25 @@ const Login = () => {
 	}
 
 	return (
-		<div>
-			<form onSubmit={handleLog}>
-				<input type="email" placeholder="E-mail" ref={emailRef} required />
+		<div className="loginContainer">
+			<form className="loginform" onSubmit={handleLog}>
 				<input
+					className="input-field inputLog"
+					type="email"
+					placeholder="E-mail"
+					ref={emailRef}
+					required
+				/>
+				<input
+					className="input-field inputLog"
 					type="password"
 					placeholder="Password"
 					ref={passwordRef}
 					required
 				/>
-				<button type="submit">Login</button>
+				<button className="bLog button" type="submit">
+					Login
+				</button>
 			</form>
 			<div>
 				{logSuccess && (

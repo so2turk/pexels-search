@@ -1,0 +1,41 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  
+  width: 300px;
+  height: 200px;
+  
+  padding: 15px;
+  border-radius: 10px;
+  background-color: green;
+}
+
+.loginform {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: green;
+}
+
+.inputLog {
+  width: 100%;
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+.bLog {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

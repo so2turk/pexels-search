@@ -28,3 +28,11 @@
   border-radius: 5px;
   color: #05a081;
 }
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}
