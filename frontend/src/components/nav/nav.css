@@ -1,0 +1,58 @@
+.nav-body {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 9px 10px;
+  align-items: center;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 0.1fr 2.5fr 0.35fr;
+  grid-template-rows: 1fr;
+  gap: 0px 5px;
+
+  align-items: center;
+}
+
+.search {
+  width: 100%;
+  margin-top: 25px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bSubmit {
+  background-color: #05a081;
+  margin-left: 5px;
+}
+
+.logo-img {
+  position: relative;
+  left: 20px;
+}
+
+.log-res,
+.avatar-field {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  position: relative;
+  right: 20px;
+}
+
+.bLogin {
+  background-color: green;
+  margin-right: 5px;
+}
+
+.bRegister {
+  background-color: cadetblue;
+}
+
+.bLogout {
+  background-color: orange;
+}
