@@ -2,8 +2,7 @@ import axios from 'axios'
 import { useRef, useState } from 'react'
 import './login.css'
 
-const Login = () => {
-	const [user, setUser] = useState()
+const Login = ({ user, setUser }) => {
 	const [logSuccess, setLogSuccess] = useState(false)
 	const [logFailure, setLogFailure] = useState(false)
 	const emailRef = useRef()
