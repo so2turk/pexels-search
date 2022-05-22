@@ -1,5 +1,6 @@
 import User from '../models/user.js'
 import bcrypt from 'bcryptjs'
+import { genAccessToken } from '../utils/auth.js'
 
 const saltRounds = 11
 
@@ -40,7 +41,9 @@ export const login = async (req, res) => {
 		const validPass = await bcrypt.compare(password, user.password)
 		if (!validPass) return res.status(400).json('Wrong email or password1')
 
-		res.status(200).json({ user })
+		const accessToken = genAccessToken(new Date(), user)
+
+		res.status(200).json({ accessToken })
 	} catch (err) {
 		res.status(500).json(err)
 	}
