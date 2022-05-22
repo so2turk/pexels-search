@@ -5,7 +5,7 @@ export const genAccessToken = (date, user) => {
 	return jwt.sign(
 		{
 			date: date,
-			userName: user.userName,
+			name: user.name,
 			id: user._id,
 		},
 		accessTokenKey,

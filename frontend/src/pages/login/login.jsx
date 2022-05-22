@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useRef, useState } from 'react'
+import JWTDecode from 'jwt-decode'
 import './login.css'
 
 const Login = ({ user, setUser }) => {
@@ -18,7 +19,7 @@ const Login = ({ user, setUser }) => {
 
 		try {
 			const res = await axios.post('/api/users/login', userToLog)
-			setUser(res?.data?.user)
+			setUser(JWTDecode(res?.data?.accessToken).name)
 			setLogSuccess(true)
 			setLogFailure(false)
 		} catch (err) {
