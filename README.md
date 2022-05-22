@@ -41,14 +41,16 @@
   - [x] Create register / login controllers
 - [x] Create register/login pages
 - [x] Enable search functionality
+- [ ] Implement JWT for secure login
+  - [ ] Enable JWT routes for
+    - [x] access and
+    - [ ] refresh tokens
+  - [ ] Create protected routes at frontend
 
 ## What's Next?
 
 (order may change)
 
-- [ ] Implement JWT for secure login
-  - [ ] Enable JWT routes for access and refresh tokens
-  - [ ] Create protected routes at frontend
 - [ ] Create profile page for users
   - [ ] Enable user to choose avatar
 
